@@ -7,10 +7,14 @@ function findValue(arr)
     {
         for(let j = i+1; j < arr.length; j++)
         {
-            if(arr[i] + arr[j] == 2020)
-            {
-                console.log("Values " + arr[i].toString() + " and " + arr[j].toString())
-                return arr[i] * arr[j]
+            for(let k = j+1; k < arr.length; k++){
+
+                let res = arr[i] + arr[j] + arr[k]
+
+                if(res == 2020){
+                    console.log(`${arr[i]} + ${arr[j]} + ${arr[k]}`)
+                    return arr[i] * arr[j] * arr[k]
+                }
             }
            
         }
